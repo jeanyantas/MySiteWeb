@@ -17,8 +17,9 @@ function validarFormulario(e){
     const respuesta = document.getElementById("respuesta")
     respuesta.innerHTML = `
     <hr>
-    <h3>DATOS ENVIADOS</h3>
+    <h3>DATOS CARGADOS</h3>
     Hola ${nombres} ${apellidos}<br/>
+    Los datos que enviarás son los siguientes:<br/>
     <b>DNI:</b> ${dni}<br/>
     <b>Correo:</b> ${correo}<br/>
     <b>Teléfono:</b> ${telefono}<br/>
@@ -30,3 +31,16 @@ function validarFormulario(e){
     <hr>`
     // <br/><b>Foto:</b><br/><img src='${imagen}' class="border-dark rounded-2" style="width:400px;height:400px;"></img>
 }
+
+const sendMail = document.getElementById('emailA')
+function handleSendEmail(event){
+    event.preventDefault()
+    const fd = new FormData(this)
+    sendMail.setAttribute(
+        'href',
+        `mailTo:jean.yantas1@gmail.com?subject=${fd.get('correo')}&body=${fd.get('mensaje')}`
+    )
+    sendMail.click()
+}
+formulario.addEventListener('submit', handleSendEmail)
+

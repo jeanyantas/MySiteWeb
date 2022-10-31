@@ -60,39 +60,39 @@
         <div class="row container-fluid">
             <div class="col-md-12 mx-auto">
                 <div class="my-4">
-                    <form id="formulario" class="form-control border border-dark">
+                    <form action="" id="formulario" class="form-control border border-dark">
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="txtDni" class="form-label">DNI</label>
-                                <input id="txtDni" type="text" placeholder="Ingrese su n&uacute;mero DNI (Solo n&uacute;meros)" maxlength="8" pattern="[0-9]+" class="form-control bg-light" required>
+                                <input id="txtDni" name="dni" type="text" placeholder="Ingrese su n&uacute;mero DNI (Solo n&uacute;meros)" maxlength="8" pattern="[0-9]+" class="form-control bg-light" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="txtNombres" class="form-label">Nombres</label>
-                                <input id="txtNombres" type="text" placeholder="Ingrese sus nombres" pattern="[a-z,A-Z, ]+" class="form-control bg-light" required>
+                                <input id="txtNombres" name="nombres" type="text" placeholder="Ingrese sus nombres" pattern="[a-z,A-Z, ]+" class="form-control bg-light" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="txtApellidos" class="form-label">Apellidos</label>
-                                <input type="text" id="txtApellidos" placeholder="Ingrese sus apellidos" pattern="[a-z,A-Z, ]+" class="form-control bg-light" required>
+                                <input type="text" id="txtApellidos" name="apellidos" placeholder="Ingrese sus apellidos" pattern="[a-z,A-Z, ]+" class="form-control bg-light" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4 mb-3">
                                 <label for="txtCorreo" class="form-label">Correo</label>
-                                <input type="email" id="txtCorreo" placeholder="Ingrese su correo" class="form-control bg-light" required>
+                                <input type="email" id="txtCorreo" name="correo" placeholder="Ingrese su correo" class="form-control bg-light" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="txtTelefono" class="form-label">T&eacute;lefono Fijo</label>
-                                <input type="tel" id="txtTelefono" minlength="8" maxlength="8" placeholder="Ejemplo: 258-4722" pattern="[0-9]{3}[-]{1}[0-9]{4}" class="form-control bg-light" required>
+                                <input type="tel" id="txtTelefono" name="telefono" minlength="8" maxlength="8" placeholder="Ejemplo: 258-4722" pattern="[0-9]{3}[-]{1}[0-9]{4}" class="form-control bg-light" required>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="txtCelular" class="form-label">Celular</label>
-                                <input type="tel" id="txtCelular" minlength="9" maxlength="9" placeholder="Ejemplo: 937817827" pattern="[0-9]{9}" class="form-control bg-light" required>
+                                <input type="tel" id="txtCelular" name="celular" minlength="9" maxlength="9" placeholder="Ejemplo: 937817827" pattern="[0-9]{9}" class="form-control bg-light" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-3 mb-3">
                                 <label for="cboDistrito" class="form-label">Distrito</label>
-                                <select id="cboDistrito" class="form-control bg-light">
+                                <select id="cboDistrito" name="distrito" class="form-control bg-light">
                                     <option selected>Seleccionar</option>
                                     <option value="Lima">Lima</option>
                                     <option value="Barranca">Barranca</option>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="txtFecha" class="form-label">Fecha de nacimiento</label>
-                                <input type="date" id="txtFecha" class="form-control bg-light" required>
+                                <input type="date" id="txtFecha" name="fecha" class="form-control bg-light" required>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="imagen" class="form-label">Imagen (Opcional)</label>
@@ -122,11 +122,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="txtMensaje" class="form-label">Mensaje</label>
-                            <textarea id="txtMensaje" rows="6" style="resize: none;" class="form-control bg-light" required></textarea>
+                            <textarea id="txtMensaje" name="mensaje" rows="6" style="resize: none;" class="form-control bg-light" required></textarea>
                         </div>
                         <div class="mb-3">
                             <button class="form-control btn btn-primary border border-dark" type="submit">Enviar</button>
                         </div>
+                        <a id="emailA"></a>
                     </form>
                 </div>
             </div>
